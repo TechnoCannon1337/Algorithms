@@ -2,7 +2,7 @@
 
 # Algorithms
 
-<a href="https://technocannon.com/freelance" target="_blank"><img src="[https://github.com/TechnoCannon1337/Projects/blob/master/imagefiles/TechnoCannonBusinessCard.png](https://github.com/TechnoCannon1337/Algorithms/blob/main/TechnoCannonBusinessCard.png)"></a>
+<a href="https://technocannon.com/freelance" target="_blank"><img src="https://github.com/TechnoCannon1337/Algorithms/blob/main/TechnoCannonBusinessCard.png"></a>
 
 # Hello World!
 
