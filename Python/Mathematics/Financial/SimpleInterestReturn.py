@@ -1,4 +1,5 @@
 def simpleInterestReturn(principleInvestment, interestRate, annualDuration):
-    return(round(principleInvestment + (principleInvestment * interestRate * annualDuration), 2))
+    interestPaid = principleInvestment * interestRate
+    return(round(principleInvestment + (interestPaid * annualDuration), 2))
 
 simpleInterestReturn()
