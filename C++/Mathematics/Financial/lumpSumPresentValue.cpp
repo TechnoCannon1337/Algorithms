@@ -7,8 +7,8 @@ float lumpSumPresentValue(float lumpSum, float annualInterestRate, float compoun
   float futureValue = lumpSum;
   float earnedInterestRate = annualInterestRate/compoundingPeriods;
   float presentValueInterestFactor = pow(1/(1 + earnedInterestRate), timeSpan);
-  float presnetValue = futureValue * presentValueInterestFactor;
-  return presnetValue;
+  float presentValue = futureValue * presentValueInterestFactor;
+  return presentValue;
 
 }
 int main()
