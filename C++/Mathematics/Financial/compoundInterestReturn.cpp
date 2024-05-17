@@ -3,12 +3,12 @@
 #include "financialFunctions.h"
 using namespace std;
 
-float compoundInterestReturn(float principleInvestment, float interestRate, float compoundPerYear, float annualDuration)
+double compoundInterestReturn(double principleInvestment, double interestRate, double compoundPerYear, double annualDuration)
 {
-    float convertedRate = (1+interestRate/compoundPerYear);
-    float spanofCompound = (compoundPerYear*annualDuration);
-    float powerRate = pow(convertedRate, spanofCompound);
-    float totalReturn = principleInvestment * powerRate;
+    double convertedRate = (1+interestRate/compoundPerYear);
+    double spanofCompound = (compoundPerYear*annualDuration);
+    double powerRate = pow(convertedRate, spanofCompound);
+    double totalReturn = principleInvestment * powerRate;
 
     return totalReturn;
 }

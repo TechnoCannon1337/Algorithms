@@ -3,9 +3,9 @@
 #include "financialFunctions.h"
 using namespace std;
 
-float simpleInterestReturn(float principleInvestment, float interestRate, float annualDuration)
+double simpleInterestReturn(double principleInvestment, double interestRate, double annualDuration)
 {
-  float interestPaid = principleInvestment * interestRate;
-  float totalReturn = principleInvestment + (interestPaid * annualDuration);
+  double interestPaid = principleInvestment * interestRate;
+  double totalReturn = principleInvestment + (interestPaid * annualDuration);
   return totalReturn;
 }

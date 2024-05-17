@@ -1,7 +1,7 @@
 #pragma once
 
-float simpleInterestReturn(float principleInvestment, float interestRate, float annualDuration);
-float annuityPresentValue(float Payment, float rate, float timeSpan);
-float compoundInterestReturn(float principleInvestment, float interestRate, float compoundPerYear, float annualDuration);
-float lumpSumFutureValue(float lumpSum, float annualInterestRate, float compoundingPeriods, float timeSpan);
-float lumpSumPresentValue(float lumpSum, float annualInterestRate, float compoundingPeriods, float timeSpan);
+double simpleInterestReturn(double principleInvestment, double interestRate, double annualDuration);
+double annuityPresentValue(double Payment, double rate, double timeSpan);
+double compoundInterestReturn(double principleInvestment, double interestRate, double compoundPerYear, double annualDuration);
+double lumpSumFutureValue(double lumpSum, double annualInterestRate, double compoundingPeriods, double timeSpan);
+double lumpSumPresentValue(double lumpSum, double annualInterestRate, double compoundingPeriods, double timeSpan);

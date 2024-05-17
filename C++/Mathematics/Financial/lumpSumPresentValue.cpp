@@ -3,12 +3,12 @@
 #include "financialFunctions.h"
 using namespace std;
 
-float lumpSumPresentValue(float lumpSum, float annualInterestRate, float compoundingPeriods, float timeSpan)
+double lumpSumPresentValue(double lumpSum, double annualInterestRate, double compoundingPeriods, double timeSpan)
 {
-  float futureValue = lumpSum;
-  float earnedInterestRate = annualInterestRate/compoundingPeriods;
-  float presentValueInterestFactor = pow(1/(1 + earnedInterestRate), timeSpan);
-  float presentValue = futureValue * presentValueInterestFactor;
+  double futureValue = lumpSum;
+  double earnedInterestRate = annualInterestRate/compoundingPeriods;
+  double presentValueInterestFactor = pow(1/(1 + earnedInterestRate), timeSpan);
+  double presentValue = futureValue * presentValueInterestFactor;
   return presentValue;
 
 }
