@@ -1,6 +1,6 @@
 #include <iostream>
 #include <cmath>
-
+#include "financialFunctions.h"
 using namespace std;
 
 float annuityPresentValue(float Payment, float rate, float timeSpan)
@@ -15,11 +15,5 @@ float annuityPresentValue(float Payment, float rate, float timeSpan)
 
   float PresentValueAnnuity = Payment * presentValueInterestFactor;
   return PresentValueAnnuity;
-
-}
-
-int main()
-{
-  annuityPresentValue();
 
 }
