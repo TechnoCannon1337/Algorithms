@@ -1,5 +1,6 @@
 #include <iostream>
 #include <cmath>
+#include "financialFunctions.h"
 using namespace std;
 
 float compoundInterestReturn(float principleInvestment, float interestRate, float compoundPerYear, float annualDuration)
@@ -10,8 +11,4 @@ float compoundInterestReturn(float principleInvestment, float interestRate, floa
     float totalReturn = principleInvestment * powerRate;
 
     return totalReturn;
-}
-int main()
-{
-  compoundInterestReturn();
 }
