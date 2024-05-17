@@ -1,5 +1,6 @@
 #include <iostream>
 #include <cmath>
+#include "financialFunctions.h"
 using namespace std;
 
 float lumpSumPresentValue(float lumpSum, float annualInterestRate, float compoundingPeriods, float timeSpan)
@@ -10,8 +11,4 @@ float lumpSumPresentValue(float lumpSum, float annualInterestRate, float compoun
   float presentValue = futureValue * presentValueInterestFactor;
   return presentValue;
 
-}
-int main()
-{
-  lumpSumPresentValue();
 }
