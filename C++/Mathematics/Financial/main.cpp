@@ -15,7 +15,6 @@ cout << "The Present Value of a Lump Sum Payment of $42,000 at a 7% Interest Rat
 cout <<  "The Future Value of a Lump Sum Payment of $42,000 at a 7% Interest Rate compounded Quarterly over 14 Years is "<< put_money(lumpSumFutureValue(42000, .07, 4, 14)*100) <<endl;
 cout << "The Annuity Present Value of Cash Flow Payments of $42,000 at a 14% Interest Rate over 7 Years is " << put_money(annuityPresentValue(42000, .14, 7)*100) <<endl;
 cout << "\n\n" <<"PRESS ENTER TO EXIT THIS PROGRAM." << endl;
-char exit[0];
-cin.get(exit, 0);
+cin.get();
 return 0;
 }
