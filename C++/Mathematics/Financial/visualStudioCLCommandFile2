@@ -1,0 +1,1 @@
+/EHsc /YcfinancialFunctions.h main.cpp SimpleInterestReturn.cpp lumpSumPresentValue.cpp lumpSumFutureValue.cpp compoundInterestReturn.cpp annuityPresentValue.cpp
