@@ -1,4 +1,4 @@
-#include "financialFunctions.h"
+#include "../Headers/financialFunctions.h"
 
 void SIMPLEINTEREST::simpleInterestReturn(double principleInvestment, double interestRate, double annualDuration)
 {

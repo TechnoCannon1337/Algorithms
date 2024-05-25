@@ -1,4 +1,4 @@
-#include "financialFunctions.h"
+#include "../Headers/financialFunctions.h"
 
 void FUTURELUMPSUM::lumpSumFutureValue(double lumpSum, double annualInterestRate, double compoundingPeriods, double timeSpan)
 {

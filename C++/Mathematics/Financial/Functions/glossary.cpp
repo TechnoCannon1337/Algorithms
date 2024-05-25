@@ -1,6 +1,6 @@
 #include <iostream>
 #include <string>
-#include "financialFunctions.h"
+#include "../Headers/financialFunctions.h"
 
 string GLOSSARY::simpleInterestDefined = "Simple interest is an interest charge that borrowers pay lenders for a loan. It is calculated using the principal only and does not include compounding interest. Simple interest relates not just to certain loans. It's also the type of interest that banks pay customers on their savings accounts.";
 

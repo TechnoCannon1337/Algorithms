@@ -1,4 +1,4 @@
-#include "financialFunctions.h"
+#include "../Headers/financialFunctions.h"
 
 void COMPOUNDINTEREST::compoundInterestReturn(double principleInvestment, double interestRate, double compoundPerYear, double annualDuration)
 {
