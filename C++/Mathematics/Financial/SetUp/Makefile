@@ -1,4 +1,4 @@
 #Makefile
 
-test: main.cpp financialFunctions.h SimpleInterestReturn.cpp lumpSumPresentValue.cpp lumpSumFutureValue.cpp compoundInterestReturn.cpp annuityPresentValue.cpp
-	g++ main.cpp financialFunctions.h SimpleInterestReturn.cpp lumpSumPresentValue.cpp lumpSumFutureValue.cpp compoundInterestReturn.cpp annuityPresentValue.cpp -o testFinance.exe
+test: ../main.cpp ../Headers/financialFunctions.h ../Functions/SimpleInterestReturn.cpp ../Functions/lumpSumPresentValue.cpp ../Functions/lumpSumFutureValue.cpp ../Functions/compoundInterestReturn.cpp ../Functions/annuityPresentValue.cpp ../Functions/glossary.cpp
+	g++ ../main.cpp ../Headers/financialFunctions.h ../Functions/SimpleInterestReturn.cpp ../Functions/lumpSumPresentValue.cpp ../Functions/lumpSumFutureValue.cpp ../Functions/compoundInterestReturn.cpp ../Functions/annuityPresentValue.cpp ../Functions/glossary.cpp -o testFinance.exe
