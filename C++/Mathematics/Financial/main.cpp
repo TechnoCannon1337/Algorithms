@@ -1,6 +1,6 @@
 #include <locale>
 #include <iomanip>
-#include "financialFunctions.h"
+#include "./Headers/financialFunctions.h"
 
 using namespace std;
 
