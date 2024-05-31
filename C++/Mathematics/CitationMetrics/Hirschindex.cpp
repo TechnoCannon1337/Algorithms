@@ -15,13 +15,13 @@ The h-index is defined as the maximum value of h such that the given author/jour
 
 */
 
-double class HIndexCalculator() {
+int class HIndexCalculator() {
 private:
-  double publication_Count;
-  double citation_Count;
-  double running_H_Index_Count;
-  double H_Index_Summation;
-  double H_Index_Array[2][publication_Count];
+  int publication_Count;
+  int citation_Count;
+  int running_H_Index_Count;
+  int H_Index_Summation;
+  int H_Index_Array[2][publication_Count];
 public:
   void printString(string output_String){
     cout << output_String << endl;
@@ -41,18 +41,22 @@ public:
         H_Index_Array[0][j] = j;
         H_Index_Array[1][j] = getUserInput();
 
-        //Todo: Develop MergeSort Function to order from Max to Min Values
-
-        if (H_Index_Array[1][j] >= H_Index_Array[0][j]){
-        	H_Index_Summation = H_Index_Array[0][j];
-        } else {
-        	break;
         }
       }
-    }
-  }
+      //Todo: Develop MergeSort Function to order from Max to Min Values
+      void sortHIndex(){
 
-  double getData(){
+
+      }
+
+      if (H_Index_Array[1][j] >= H_Index_Array[0][j]){
+        H_Index_Summation = H_Index_Array[0][j];
+      } else {
+        break;
+      }
+    }
+
+  int getData(){
     printString("The h-index is " << H_Index_Summation);
     return H_Index_Summation;
   }
