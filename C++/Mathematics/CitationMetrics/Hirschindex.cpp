@@ -1,7 +1,7 @@
 #include <iostream>
 #include <cmath>
 #include <string>
-
+// Reorder QuickSort
 using namespace std;
 
 /*
@@ -40,10 +40,8 @@ public:
         printString("Enter Total Number of Citations for Publication number " << j);
         H_Index_Array[0][j] = j;
         H_Index_Array[1][j] = getUserInput();
-
         }
       }
-      //Todo: Develop Sort Function to order from Max to Min Values
 
       int partition(int arr[][], int left, int right){
         int pivot = arr[1][(left + right)/2];
@@ -84,7 +82,6 @@ public:
     printString("The h-index is " << H_Index_Summation);
     return H_Index_Summation;
   }
-
 };
 
 
@@ -93,5 +90,4 @@ int main()
   HIndexCalculator testHIndexCalculator;
   testHIndexCalculator.setData();
   testHIndexCalculator.getData();
-
 };
