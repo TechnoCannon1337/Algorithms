@@ -44,10 +44,34 @@ public:
         }
       }
       //Todo: Develop Sort Function to order from Max to Min Values
-      void sortHIndex(){
 
-
+      int partition(int arr[][], int left, int right){
+        int pivot = arr[1][(left + right)/2];
+        while (left <= right){
+          while (arr[1][left] < pivot) left++;
+          while (arr[1][right] > pivot) right--;
+          if (left <= right){
+            int temp_swap = left;
+            left = right;
+            right = temp_swap;
+            left++;
+            right--;
+          }
+        }
+        return left;
       }
+
+      void sortHIndex(int arr[][], int left, int right){
+        int index = partition(arr, left, right);
+        if (left < index - 1){
+          sortHIndex(arr, left, index - 1);
+        }
+        if (index < right) {
+          sortHIndex(arr, index, right);
+        }
+      }
+
+      sortHIndex(H_Index_Array, 0, publication_Count -1);
 
       if (H_Index_Array[1][j] >= H_Index_Array[0][j]){
         H_Index_Summation = H_Index_Array[0][j];
@@ -68,7 +92,5 @@ int main()
 {
   HIndexCalculator testHIndexCalculator;
   testHIndexCalculator();
-
-
 
 };
