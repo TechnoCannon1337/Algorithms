@@ -15,9 +15,9 @@ The h-index is defined as the maximum value of h such that the given author/jour
 
 */
 
-int class HIndexCalculator() {
+class HIndexCalculator {
 private:
-  int publication_Count;
+  static const int publication_Count;
   int citation_Count;
   int running_H_Index_Count;
   int H_Index_Summation;
@@ -43,7 +43,7 @@ public:
         }
       }
 
-      int partition(int arr[][], int left, int right){
+      int partition(int arr[2][publication_Count], int left, int right){
         int pivot = arr[1][(left + right)/2];
         while (left <= right){
           while (arr[1][left] < pivot) left++;
@@ -59,7 +59,7 @@ public:
         return left;
       }
 
-      void sortHIndex(int arr[][], int left, int right){
+      void sortHIndex(int arr[2][publication_Count], int left, int right){
         int index = partition(arr, left, right);
         if (left < index - 1){
           sortHIndex(arr, left, index - 1);
@@ -91,4 +91,4 @@ int main()
   testHIndexCalculator.setData();
   testHIndexCalculator.getData();
   return 0;
-};
+}
