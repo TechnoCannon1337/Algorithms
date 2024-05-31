@@ -90,4 +90,5 @@ int main()
   HIndexCalculator testHIndexCalculator;
   testHIndexCalculator.setData();
   testHIndexCalculator.getData();
+  return 0;
 };
