@@ -21,7 +21,7 @@ private:
   int citation_Count;
   int running_H_Index_Count;
   int H_Index_Summation;
-  int *H_Index_Array = (int*) malloc((2) * (1) * sizeof(int));
+  int *H_Index_Array = new int[2][1];
 
 public:
   void printString(string output_String, int output_Data ='\0'){
@@ -36,7 +36,10 @@ public:
 
   size_t resizeHindexArray(int **array, size_t oldsize, size_t amount){
     size_t new_size = oldsize + amount;
-    *array = (int*) ralloc(*array, new_size * sizeof(int));
+    int *new_array = new int[2][new_size];
+    memcpy(new_array, array, oldsize * sizeof(int));
+    delete [] *array;
+    *array = new_array;
     return new_size;
 
   }
@@ -44,7 +47,7 @@ public:
   void setData(){
     printString("Enter Total Number Publication Titles");
     publication_Count = getUserInput();
-    resizeHindexArray(&H_Index_Array, (2) * (1), publication_Count);
+    resizeHindexArray(&H_Index_Array, 1, publication_Count);
     for (int i=0; i < 2; i++){
       for (int j=0; j < publication_Count; j++){
         printString("Enter Total Number of Citations for Publication number " , j);
@@ -95,7 +98,7 @@ public:
     printString("The h-index is ", H_Index_Summation);
     return H_Index_Summation;
   }
-free(H_Index_Array);
+delete [] H_Index_Array);
 };
 
 
