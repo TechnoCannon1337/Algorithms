@@ -43,7 +43,7 @@ public:
 
         }
       }
-      //Todo: Develop MergeSort Function to order from Max to Min Values
+      //Todo: Develop Sort Function to order from Max to Min Values
       void sortHIndex(){
 
 
