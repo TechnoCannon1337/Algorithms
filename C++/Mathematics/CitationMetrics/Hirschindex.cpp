@@ -78,7 +78,7 @@ public:
       } else {
         break;
       }
-    }
+  }
 
   int getData(){
     printString("The h-index is " << H_Index_Summation);
@@ -91,6 +91,7 @@ public:
 int main()
 {
   HIndexCalculator testHIndexCalculator;
-  testHIndexCalculator();
+  testHIndexCalculator.setData();
+  testHIndexCalculator.getData();
 
 };
