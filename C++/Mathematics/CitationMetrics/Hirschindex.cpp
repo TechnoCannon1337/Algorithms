@@ -46,8 +46,8 @@ public:
       int partition(int arr[2][publication_Count], int left, int right){
         int pivot = arr[1][(left + right)/2];
         while (left <= right){
-          while (arr[1][left] < pivot) left++;
-          while (arr[1][right] > pivot) right--;
+          while (arr[1][left] > pivot) left++;
+          while (arr[1][right] < pivot) right--;
           if (left <= right){
             int temp_swap = arr[1][left];
             arr[1][left] = arr[1][right];
