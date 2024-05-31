@@ -23,8 +23,8 @@ private:
   int H_Index_Summation;
   int H_Index_Array[2][publication_Count];
 public:
-  void printString(string output_String){
-    cout << output_String << endl;
+  void printString(string output_String, int output_Data =""){
+    cout << output_String << output_Data << endl;
   }
   bool getUserInput(){
     bool number_Count;
@@ -37,7 +37,7 @@ public:
     publication_Count = getUserInput();
     for (int i=0; i < 2; i++){
       for (int j=0; j < publication_Count; j++){
-        printString("Enter Total Number of Citations for Publication number " << j);
+        printString("Enter Total Number of Citations for Publication number " , j);
         H_Index_Array[0][j] = j;
         H_Index_Array[1][j] = getUserInput();
         }
@@ -70,16 +70,19 @@ public:
       }
 
       sortHIndex(H_Index_Array, 0, publication_Count -1);
-
-      if (H_Index_Array[1][j] >= H_Index_Array[0][j]){
-        H_Index_Summation = H_Index_Array[0][j];
-      } else {
-        break;
+      for (int i=0; i < 2; i++){
+        for (int j=0; j < publication_Count; j++){
+          if (H_Index_Array[1][j] >= H_Index_Array[0][j]){
+            H_Index_Summation = H_Index_Array[0][j];
+          } else {
+            break;
+          }
+        }
       }
   }
 
   int getData(){
-    printString("The h-index is " << H_Index_Summation);
+    printString("The h-index is ", H_Index_Summation);
     return H_Index_Summation;
   }
 };
