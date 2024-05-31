@@ -21,20 +21,30 @@ private:
   int citation_Count;
   int running_H_Index_Count;
   int H_Index_Summation;
-  int H_Index_Array[2][publication_Count];
+  int *H_Index_Array = (int*) malloc((2) * (1) * sizeof(int));
+
 public:
   void printString(string output_String, int output_Data ='\0'){
     cout << output_String << output_Data << endl;
   }
-  bool getUserInput(){
-    bool number_Count;
+
+  int getUserInput(){
+    int number_Count;
     cin >> number_Count;
     return number_Count;
+  }
+
+  size_t resizeHindexArray(int **array, size_t oldsize, size_t amount){
+    size_t new_size = oldsize + amount;
+    *array = (int*) ralloc(*array, new_size * sizeof(int));
+    return new_size;
+
   }
 
   void setData(){
     printString("Enter Total Number Publication Titles");
     publication_Count = getUserInput();
+    resizeHindexArray(&H_Index_Array, (2) * (1), publication_Count);
     for (int i=0; i < 2; i++){
       for (int j=0; j < publication_Count; j++){
         printString("Enter Total Number of Citations for Publication number " , j);
@@ -85,6 +95,7 @@ public:
     printString("The h-index is ", H_Index_Summation);
     return H_Index_Summation;
   }
+free(H_Index_Array);
 };
 
 
