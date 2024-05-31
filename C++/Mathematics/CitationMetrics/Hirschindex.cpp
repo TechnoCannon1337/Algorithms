@@ -99,7 +99,7 @@ public:
     printString("The h-index is ", H_Index_Summation);
     return H_Index_Summation;
   }
-delete [] H_Index_Array);
+delete [] H_Index_Array;
 };
 
 
