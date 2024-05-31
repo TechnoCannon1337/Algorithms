@@ -36,7 +36,7 @@ public:
     printString("Enter Total Number Publication Titles");
     publication_Count = getUserInput();
     for (int i=0; i < 2; i++){
-      for (int j; j < publication_Count; j++){
+      for (int j=0; j < publication_Count; j++){
         printString("Enter Total Number of Citations for Publication number " << j);
         H_Index_Array[0][j] = j;
         H_Index_Array[1][j] = getUserInput();
@@ -49,9 +49,9 @@ public:
           while (arr[1][left] < pivot) left++;
           while (arr[1][right] > pivot) right--;
           if (left <= right){
-            int temp_swap = left;
-            left = right;
-            right = temp_swap;
+            int temp_swap = arr[1][left];
+            arr[1][left] = arr[1][right];
+            arr[1][right] = temp_swap;
             left++;
             right--;
           }
