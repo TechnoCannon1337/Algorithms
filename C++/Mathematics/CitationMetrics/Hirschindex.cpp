@@ -17,13 +17,13 @@ The h-index is defined as the maximum value of h such that the given author/jour
 
 class HIndexCalculator {
 private:
-  static const int publication_Count;
+  static int publication_Count;
   int citation_Count;
   int running_H_Index_Count;
   int H_Index_Summation;
   int H_Index_Array[2][publication_Count];
 public:
-  void printString(string output_String, int output_Data =""){
+  void printString(string output_String, int output_Data ='\0'){
     cout << output_String << output_Data << endl;
   }
   bool getUserInput(){
