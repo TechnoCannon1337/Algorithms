@@ -1,5 +1,16 @@
 #include <iostream>
 
+/*
+The h-index is an author-level metric that measures both the productivity and citation impact of the publications, initially used for an individual scientist or scholar. The h-index correlates with success indicators such as winning the Nobel Prize, being accepted for research fellowships and holding positions at top universities.
+
+The index is based on the set of the scientist's most cited papers and the number of citations that they have received in other publications.
+
+The index was suggested in 2005 by Jorge E. Hirsch, a physicist at UC San Diego, as a tool for determining theoretical physicists' relative quality
+
+The h-index is defined as the maximum value of h such that the given author/journal has published at least h papers that have each been cited at least h times
+
+*/
+
 using namespace std;
 
 class HIndexCalculator {
