@@ -13,16 +13,16 @@ private:
     int H_Index_Summation;
     size_t current_size;
 
-public:
-    HIndexCalculator();
-    ~HIndexCalculator();
-    void printString(string output_String, int output_Data);
-    int getUserInput();
-    void setData();
-    int partition(int** arr, int left, int right);
-    void sortHIndex(int** arr, int left, int right);
-    void calculateHIndex();
-    int getData();
+  public:
+      HIndexCalculator();
+      ~HIndexCalculator();
+      void printString(string output_String, int output_Data);
+      int getUserInput();
+      void setData();
+      int partition(int arr[2][publication_count], int left, int right);
+      void sortHIndex(int arr[2][publication_count], int left, int right);
+      void calculateHIndex();
+      int getData();
 
 };
 
@@ -33,42 +33,42 @@ HIndexCalculator::~HIndexCalculator() {
         delete[] H_Index_Array[i];
     }
     delete[] H_Index_Array;
-}
+  }
 
-void HIndexCalculator::printString(string output_String, int output_Data = '\0') {
+void HIndexCalculator::printString(string output_String, int output_Data ='\0'){
     cout << output_String << output_Data << endl;
-}
+  }
 
 int HIndexCalculator::getUserInput() {
     int input;
     cin >> input;
     return input;
-}
+  }
 
-int HIndexCalculator::partition(int** arr, int left, int right) {
-    int pivot = arr[1][(left + right) / 2];
-    while (left <= right) {
+int HIndexCalculator::partition(int arr[2][publication_count], int left, int right){
+      int pivot = arr[1][(left + right)/2];
+      while (left <= right){
         while (arr[1][left] > pivot) left++;
         while (arr[1][right] < pivot) right--;
-        if (left <= right) {
-            int temp_swap = arr[1][left];
-            arr[1][left] = arr[1][right];
-            arr[1][right] = temp_swap;
-            left++;
-            right--;
+        if (left <= right){
+          int temp_swap = arr[1][left];
+          arr[1][left] = arr[1][right];
+          arr[1][right] = temp_swap;
+          left++;
+          right--;
         }
-    }
-    return left;
-}
+      }
+      return left;
+  }
 
-void HIndexCalculator::sortHIndex(int** arr, int left, int right) {
-    int index = partition(arr, left, right);
-    if (left < index - 1) {
-        sortHIndex(arr, left, index - 1);
-    }
-    if (index < right) {
-        sortHIndex(arr, index, right);
-    }
+void HIndexCalculator::sortHIndex(int arr[2][publication_count], int left, int right){
+  int index = partition(arr, left, right);
+  if (left < index - 1){
+    sortHIndex(arr, left, index - 1);
+  }
+  if (index < right) {
+    sortHIndex(arr, index, right);
+  }
 }
 
 void HIndexCalculator::setData() {
@@ -88,30 +88,31 @@ void HIndexCalculator::setData() {
     current_size = publication_count;
 
     for (int j = 0; j < publication_count; j++) {
-        printString("Enter Total Number of Citations for Publication number ", j);
+        printString("Enter Total Number of Citations for Publication number " , j);
         H_Index_Array[0][j] = j;
         H_Index_Array[1][j] = getUserInput();
     }
-    sortHIndex(H_Index_Array, 0, publication_count - 1);
-    for (int i = 0; i < 2; i++) {
-        for (int j = 0; j < publication_count; j++) {
-            if (H_Index_Array[1][j] >= H_Index_Array[0][j]) {
-                H_Index_Summation = H_Index_Array[0][j];
-            } else {
-                break;
-            }
+    sortHIndex(H_Index_Array, 0, publication_count -1);
+      for (int i=0; i < 2; i++){
+        for (int j=0; j < publication_count; j++){
+          if (H_Index_Array[1][j] >= H_Index_Array[0][j]){
+            H_Index_Summation = H_Index_Array[0][j];
+          } else {
+            break;
+          }
         }
-    }
-}
+      }
+  }
 
-int HIndexCalculator::getData() {
+int HIndexCalculator::getData(){
     printString("The h-index is ", H_Index_Summation);
     return H_Index_Summation;
-}
+  }
 
-int main() {
-    HIndexCalculator testHIndexCalculator;
-    testHIndexCalculator.setData();
-    testHIndexCalculator.getData();
-    return 0;
+int main()
+{
+  HIndexCalculator testHIndexCalculator;
+  testHIndexCalculator.setData();
+  testHIndexCalculator.getData();
+  return 0;
 }
