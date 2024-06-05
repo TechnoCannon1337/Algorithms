@@ -1,6 +1,6 @@
 #include <locale>
 #include <iomanip>
-#include "./Headers/financialFunctions.h"
+#include "./HeaderFiles/github_hirsch_index_metric_calculator.h"
 
 using namespace std;
 
