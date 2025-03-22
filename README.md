@@ -8,25 +8,23 @@
 
 ## Techno Cannon, MPA
 
-<a href="https://technocannon.com/freelance" target="_blank"><img src="https://github.com/TechnoCannon1337/Algorithms/blob/main/TechnoCannonBusinessCard.png"></a>
+<img src="https://github.com/TechnoCannon1337/Algorithms/blob/main/TechnoCannonBusinessCard.png">
 
 # COMMERCIAL LINKS:
 Official Website:
 HTTPS://TECHNOCANNON.COM
 
 
-Cyber Swag:
-https://TechnoCannon.com/swag
 
-# PEER REVIEWED PUBLISHED WORKS:
-Official WordPress Plugin
+# WORDPRESS DEVELOPMENT:
+Official WordPress Plugins
+Pyplugger for Pyscript
 https://wordpress.org/plugins/pyplugger-for-pyscript/
 
 # SOCIAL MEDIA LINKS
 Twitter Link:
 http://TechnoCannon.com/twitter
 
-GitHub Link:
-http://TechnoCannon.com/github
+
 
 
